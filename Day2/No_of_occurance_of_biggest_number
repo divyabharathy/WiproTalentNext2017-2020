@@ -1,0 +1,29 @@
+//an algorithm to accept 10 integer elements for an array and then find the number of times the number with the maximum value occurs in the array. 
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in); 
+	    int[] arr=new int[10];
+	    int[] a=new int[10];
+	    int i=0;
+	    int big=0,count=0;
+	    while(i<10)
+	    {
+	        arr[i]=s.nextInt();
+	        if(big<arr[i])
+	        {
+	            big=arr[i];
+	        }
+	        i++;
+	    }
+	    for(i=0;i<10;i++)
+	    {
+	        if(arr[i]==big)
+	        {
+	            count++;
+	        }
+	    }
+	    System.out.println(count);
+	 }
+}
