@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int[] a=new int[n];
+        int[] b=new int[n];
+        int i,j,count,value,k=0,t,limit,l;
+        int[] v=new int[n];
+        for(i=0;i<n;i++)
+        {
+            a[i]=s.nextInt();
+        }
+        for(i=0;i<n;i++)
+        {
+            value=0;
+            count=1;
+        for(l=0;l<k;l++)
+        {
+            if(a[i]==v[l])
+            {
+                value++;
+                break;
+            }
+        }
+        if(value==1)
+        {
+            continue;
+        }
+        for(j=i+1;j<n;j++)
+        {
+            v[k]=a[i];
+            if(a[i]==a[j])
+            {
+                count++;
+            }
+        }
+        b[k]=count;
+        k++;
+        }
+        for(i=0;i<k;i++)
+        {
+            for(j=0;j<k;j++)
+            {
+                if(b[i]>b[j])
+                {
+                    t=b[i];
+                    l=v[i];
+                    b[i]=b[j];
+                    v[i]=v[j];
+                    b[j]=t;
+                    v[j]=l;
+
+                }
+            }
+        }
+        for(i=0;i<k;i++)
+        {
+            System.out.print(v[i]+" ");
+        }
+        
+    }
+
+}
