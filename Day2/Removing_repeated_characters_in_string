@@ -1,0 +1,32 @@
+//an algorithm to accept a given string from the user. The algorithm must then remove characters from the string which appear more than once. 
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in); 
+	    String s1=s.nextLine();
+	    char[] a=s1.toCharArray();
+	    char[] b=new char[50];
+	    int i,j=0,k,f=0;
+	    int n=a.length;
+	    for(i=0;i<n;i++)
+	    {
+	        f=0;
+	       for(k=0;k<j;k++)
+	       {
+	           if(a[i]==b[k])
+	               {
+	                   f=1;
+	                   break;
+	               }
+	       }
+	       if(f==0)
+	       {
+	            b[j]=a[i];
+	            j++;
+	            System.out.print(a[i]);
+	       }
+	   
+	    }
+	 }
+}
