@@ -1,0 +1,47 @@
+//Write a program to accept gender ("Male" or "Female") and age (1-120) from command line
+//arguments and print the percentage of interest based on the given conditions.
+//Interest == 8.2%
+//	Gender ==> Female
+//	Age ==>1 to 58
+//Interest == 7.6%
+//	Gender ==> Female
+//	Age ==>59 -120
+//Interest == 9.2%
+//	Gender ==> Male
+//	Age ==>1-60
+//Interest == 8.3%
+//	Gender ==> Male
+//	Age ==>61-120 
+
+package project;
+
+public class AgeInterest {
+
+	public static void main(String[] args) {
+		String g=args[0];
+		System.out.println(g);
+		int a=Integer.parseInt(args[1]);
+		System.out.println(a);
+		double i=0;
+		if(g.equals("Female") && a<=58 && a>=1)
+		{
+			i=8.2;
+		}
+		else if(g.equals("Female")&& a<=120 && a>=59)
+		{
+			i=7.6;
+		}
+		else if(g.equals("Male")&& a<=60 && a>=1)
+		{
+			i=9.2;
+		}
+		else if(g.equals("Male")&& a<=120&& a>=1)
+		{
+			i=8.3;
+		}
+		System.out.println("Interest= "+i+"%");
+		
+		
+	}
+
+}
