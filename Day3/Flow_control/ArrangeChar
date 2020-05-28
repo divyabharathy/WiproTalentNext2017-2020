@@ -1,0 +1,19 @@
+//Initialize two character variables in a program and display the characters in alphabetical order. 
+package project;
+import java.io.*;
+import java.util.*;
+public class ArrangeChar {
+
+	public static void main(String[] args) {
+	char[] arr={'e','a',};
+	char i;
+	if(arr[0]>arr[1])
+	{
+		i=arr[0];
+		arr[0]=arr[1];
+		arr[1]=i;
+	}
+	System.out.println(arr[0]+","+arr[1]);	
+	}
+
+}
