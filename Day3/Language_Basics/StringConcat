@@ -1,0 +1,10 @@
+// a Program that accepts two Strings as command line arguments and generate the output by adding new Technologies in between those two strings
+package project;
+
+public class StringConcat {
+
+	public static void main(String[] args) {
+		System.out.println(args[0]+" Technologies "+args[1]);
+	}
+
+}
