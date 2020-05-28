@@ -1,0 +1,22 @@
+//Write a program to convert from upper case to lower case and vice versa of an alphabet and print
+//the old character and new character as shown in example (Ex: a->A, M->m). 
+package project;
+
+public class CharacterCase {
+
+	public static void main(String[] args) {
+		char l='C';
+		char n;
+		if(l<97)
+		{
+			n=(char) (l+32);
+		}
+		else
+		{
+			n=(char)(l-32);
+		}
+		System.out.println(l+"->"+n);
+		
+	}
+
+}
