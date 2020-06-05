@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.*;
 class PrimesBetweenRange
 {
+	public int countPrimes(int input1,int input2)
+	{
 	int count=0,f=0;
 	for(int i=input1;i<=input2;i++)
 	{
