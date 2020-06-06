@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 class WeightOfString
 {
-	public String stringWeight(String input1)
+	public String stringWeight(String input1,int input2)
 	{
 		int t=0,v=0;
 		input1=input1.toUpperCase();
