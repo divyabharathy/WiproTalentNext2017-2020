@@ -1,3 +1,5 @@
+import java.io.*;
+import java.util.*;
 class WeightOfHillPattern
 {
   public int weightOfPattern(int input1,int input2,int input3)
