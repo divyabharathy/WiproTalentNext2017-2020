@@ -2,6 +2,6 @@ import java.io.*;
 import  java.util.*;
 class FindStringCode
 {
-  public toStringCode(String input1)
+  public int toStringCode(String input1)
   {
     
