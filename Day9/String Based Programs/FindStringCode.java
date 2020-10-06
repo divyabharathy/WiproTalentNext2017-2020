@@ -4,33 +4,30 @@ class FindStringCode
 {
   public int toStringCode(String input1)
   {
-		int temp=0,count,l=0;
-		String val="";
-		input1=input1.toUpperCase();
+		int sum=0;
+		String sol="";
 		String[] s=input1.split(" ");
-		for(int i=0;i<s.length;i++)
+		int n=s.length;
+		for(int i=0;i<n;i++)
 		{
-			l=0;
-			temp=0;
-			l=s[i].length()-1;
-			if(s[i].length()==1)
+			sum=0;
+			String t=s[i].toUpperCase();
+			for(int j=0;j<t.length()/2+1;j++)
 			{
-				temp=(int)(s[i].charAt(0))-64;	
+				if(j==(t.length()-1-j))
+				{
+					sum+=(t.charAt(j)-64);
+					break;
+				}
+				sum+=Math.abs((t.charAt(j)-64)-(t.charAt(t.length()-1-j)-64));
+				if(t.length()%2==0&&(t.length()-1)/2==j)
+				{
+					break;
+				}
 			}
-		    for(int j=0;j<s[i].length()/2;j++)
-		    {
-				
-		    	if(s[i].length()%2!=0&&j==s[i].length()/2-1)
-		    	{
-		    		temp+=(int)(s[i].charAt(j+1))-64;
-		    	}
-		       temp+=Math.abs(((int)(s[i].charAt(j))-64)-((int)(s[i].charAt(l))-64));
-		       l--;
-		    }
-		   val+=String.valueOf(temp);
+			sol+=String.valueOf(sum);
 		}
-		count=Integer.parseInt(val);
-		return count;
+		return Integer.parseInt(sol);
+	   
 	}
 }
-    
